@@ -1886,6 +1886,11 @@ html {
     opacity: 0;
     transform: scale(0.8);
     pointer-events: none;
+    display: none !important;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .gallery-item.visible {

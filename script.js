@@ -73,42 +73,17 @@ beforeAfterFilterButtons.forEach(button => {
         button.classList.add('active');
         
         const filter = button.getAttribute('data-filter');
-        const galleryGrid = document.querySelector('#before-after .gallery-grid');
         
-        // Immediately hide all items first
-        beforeAfterGalleryItems.forEach(item => {
-            item.classList.add('hidden');
-            item.classList.remove('visible');
-        });
-        
-        // Convert NodeList to Array for sorting
-        const itemsArray = Array.from(beforeAfterGalleryItems);
-        
-        // Sort items: filtered items first, then others
-        itemsArray.sort((a, b) => {
-            const aCategory = a.getAttribute('data-category');
-            const bCategory = b.getAttribute('data-category');
-            
-            const aMatches = filter === 'all' || aCategory === filter;
-            const bMatches = filter === 'all' || bCategory === filter;
-            
-            if (aMatches && !bMatches) return -1;
-            if (!aMatches && bMatches) return 1;
-            return 0;
-        });
-        
-        // Reorder items in the DOM
-        itemsArray.forEach(item => {
-            galleryGrid.appendChild(item);
-        });
-        
-        // Show only the filtered items
+        // Show/hide items based on filter
         beforeAfterGalleryItems.forEach(item => {
             const category = item.getAttribute('data-category');
             
             if (filter === 'all' || category === filter) {
                 item.classList.remove('hidden');
                 item.classList.add('visible');
+            } else {
+                item.classList.add('hidden');
+                item.classList.remove('visible');
             }
         });
     });
@@ -126,42 +101,17 @@ workFilterButtons.forEach(button => {
         button.classList.add('active');
         
         const filter = button.getAttribute('data-filter');
-        const galleryGrid = document.querySelector('#work .gallery-grid');
         
-        // Immediately hide all items first
-        workGalleryItems.forEach(item => {
-            item.classList.add('hidden');
-            item.classList.remove('visible');
-        });
-        
-        // Convert NodeList to Array for sorting
-        const itemsArray = Array.from(workGalleryItems);
-        
-        // Sort items: filtered items first, then others
-        itemsArray.sort((a, b) => {
-            const aCategory = a.getAttribute('data-category');
-            const bCategory = b.getAttribute('data-category');
-            
-            const aMatches = filter === 'all' || aCategory === filter;
-            const bMatches = filter === 'all' || bCategory === filter;
-            
-            if (aMatches && !bMatches) return -1;
-            if (!aMatches && bMatches) return 1;
-            return 0;
-        });
-        
-        // Reorder items in the DOM
-        itemsArray.forEach(item => {
-            galleryGrid.appendChild(item);
-        });
-        
-        // Show only the filtered items
+        // Show/hide items based on filter
         workGalleryItems.forEach(item => {
             const category = item.getAttribute('data-category');
             
             if (filter === 'all' || category === filter) {
                 item.classList.remove('hidden');
                 item.classList.add('visible');
+            } else {
+                item.classList.add('hidden');
+                item.classList.remove('visible');
             }
         });
     });
