@@ -1,0 +1,20 @@
+{
+  "name": "4-seasons-property-services",
+  "version": "1.0.0",
+  "description": "Professional landscaping and property services website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "landscaping",
+    "property-services",
+    "static-website"
+  ],
+  "author": "4 Seasons Property Services LLC",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
