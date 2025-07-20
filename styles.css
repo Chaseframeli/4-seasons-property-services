@@ -556,9 +556,10 @@ body {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-info h3 {
@@ -603,47 +604,7 @@ body {
     text-decoration: underline;
 }
 
-.contact-form {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
 
-.contact-form h3 {
-    font-size: 1.8rem;
-    color: #2c5530;
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #4a7c59;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
 
 /* FAQ Section */
 .faq {
@@ -1133,57 +1094,7 @@ body {
         font-weight: 500;
     }
 
-    .contact-form {
-        background: white;
-        padding: 2rem;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
 
-    .contact-form h3 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        color: #2c5530;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        width: 100%;
-        padding: 16px;
-        border: 2px solid #e9ecef;
-        border-radius: 12px;
-        font-size: 16px;
-        transition: all 0.3s ease;
-        background: #f8f9fa;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: #4a7c59;
-        background: white;
-        box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
-    }
-
-    .contact-form .btn {
-        width: 100%;
-        padding: 16px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
-        color: white;
-        border: none;
-        box-shadow: 0 8px 25px rgba(74, 124, 89, 0.3);
-    }
 
     /* Improved Gallery Sections */
     .before-after-section,
@@ -1599,33 +1510,7 @@ body {
         font-size: 0.95rem;
     }
 
-    .contact-form {
-        padding: 1.5rem;
-        border-radius: 18px;
-    }
 
-    .contact-form h3 {
-        font-size: 1.6rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .form-group {
-        margin-bottom: 1.2rem;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 14px;
-        border-radius: 10px;
-        font-size: 16px;
-    }
-
-    .contact-form .btn {
-        padding: 14px;
-        font-size: 1rem;
-        border-radius: 10px;
-    }
 
     /* Enhanced Gallery Sections */
     .before-after-section,
@@ -1778,9 +1663,7 @@ body {
         font-size: 0.95rem;
     }
 
-    .contact-form h3 {
-        font-size: 1.2rem;
-    }
+
 
     .about-text h2 {
         font-size: 1.6rem;
@@ -1941,13 +1824,7 @@ html {
         border-bottom: none;
     }
     
-    /* Better mobile form experience */
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 15px;
-        border-radius: 8px;
-    }
+
     
     /* Improve mobile gallery experience */
     .gallery-item {
@@ -2072,13 +1949,7 @@ html {
         -webkit-overflow-scrolling: touch;
     }
     
-    /* Better mobile form focus */
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-        outline: 2px solid #4a7c59;
-        outline-offset: 2px;
-    }
+
 }
 
 /* Landscape mobile optimizations */
